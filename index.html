@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99089004-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99089004-2');
+    </script>
+
+    <title>La Cafreberia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        $(document).ready(function(){
+
+            var numberOfImages=3;
+
+            var imageNum = Math.round(Math.random()*(numberOfImages-1))+1;
+
+            var imgPath=('images/'+imageNum+'.jpg');
+
+            $('cuerpote').css('background-image', ('url("'+imgPath+'")'));
+
+        });
+    </script>
+    <style>
+        body,h1,h5 {font-family: "Raleway", sans-serif}
+        body, html {height: 100%}
+        .bgimg {
+            background-image: url('images/cafe_bn.jpg');
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+<div id ="cuerpote" class="bgimg w3-display-container w3-text-white">
+    <div class="w3-display-middle w3-jumbo">
+        <img src="images/cafreberia.jpg" style='width:100%;' border="0" alt="Null" />
+    </div>
+    <div class="w3-display-topleft w3-container w3-xlarge">
+        <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">Menu</button></p>
+        <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">Contacto</button></p>
+    </div>
+    <div class="w3-display-topright w3-container w3-xlarge">
+        <p><button onclick="location.href = 'https://www.facebook.com/cafebreriarestopy/';" class="w3-button w3-black"><i class="fa fa-facebook-official w3-hover-opacity"></i></button></p>
+        <p><button onclick="location.href = 'https://goo.gl/maps/MMh4fpQXLC12';" class="w3-button w3-black"><i class="fa fa-map-marker w3-hover-opacity"></i></button></p>
+    </div>
+    <div class="w3-display-bottomleft w3-container">
+        <p class="w3-xlarge">Lunes - Jueves - Domingo 15:00 - 23:00 | Viernes - Sabados 15:00 - 00:00</p>
+        <p class="w3-large">Malutín 675 C/ Lilio | Asunción</p>
+        <p>powered by <a href="http://www.creatu.co" target="_blank">Creatu.co</a></p>
+    </div>
+</div>
+
+<!-- Menu Modal -->
+<div id="menu" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container w3-black w3-display-container">
+            <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+            <h1>Starters</h1>
+        </div>
+        <div class="w3-container">
+            <h5>Tomato Soup <b>$2.50</b></h5>
+            <h5>Chicken Salad <b>$3.50</b></h5>
+            <h5>Bread and Butter <b>$1.00</b></h5>
+        </div>
+        <div class="w3-container w3-black">
+            <h1>Main Courses</h1>
+        </div>
+        <div class="w3-container">
+            <h5>Grilled Fish and Potatoes <b>$8.50</b></h5>
+            <h5>Italian Pizza <b>$5.50</b></h5>
+            <h5>Veggie Pasta <b>$4.00</b></h5>
+            <h5>Chicken and Potatoes <b>$6.50</b></h5>
+            <h5>Deluxe Burger <b>$5.00</b></h5>
+        </div>
+        <div class="w3-container w3-black">
+            <h1>Desserts</h1>
+        </div>
+        <div class="w3-container">
+            <h5>Fruit Salad <b>$2.50</b></h5>
+            <h5>Ice cream <b>$2.00</b></h5>
+            <h5>Chocolate Cake <b>$4.00</b></h5>
+            <h5>Cheese <b>$5.50</b></h5>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="contact" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container w3-black">
+            <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+            <h1>Contacto</h1>
+        </div>
+        <div class="w3-container">
+            <!-- <p>Reservar una mesa ? ... Escribenos!</p>
+             <form action="/action_page.php" target="_blank">
+                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre" required name="Nombre"></p>
+                 <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Cuantas Personas" required name="Personas:"></p>
+                 <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Fecha y Hora" required name="Fecha" value="2017-11-16T20:00"></p>
+                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mensaje / Pedido Especial" required name="Message"></p>
+                 <p><button class="w3-button" type="submit">Enviar Mensaje</button></p>
+             </form>-->
+            <p>Llamanos al : (021) 610 902 </p>
+            <p>Encontranos en: </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14429.906916255968!2d-57.5782514!3d-25.2881823!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb0ad5ecb19b812f1!2sLa+Cafebreria!5e0!3m2!1ses-419!2spy!4v1516735976376"
+                    width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
